@@ -1,7 +1,7 @@
 <template>
   <div>
-    <addTodo/>
-    <todoList :list="list"/>
+    <addTodo @addItem="addItem($event)" />
+    <todoList :list="list" @delItem="delItem($event)"/>
     <hr>
     <Login/>
   </div>
@@ -22,8 +22,16 @@ export default {
   },
   data() {
     return {
-      list: ['11', '22', '33']
+      list: []
     }
+  },
+  methods: {
+    delItem(index) {
+      this.list.splice(index, 1);
+    },
+    addItem(item) {
+      this.list.push(item);
+    },
   }
 }
 </script>

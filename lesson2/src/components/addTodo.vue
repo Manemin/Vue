@@ -15,6 +15,8 @@ export default {
   },
   methods: {
     add() {
+      this.$emit('addItem', this.text);
+      this.text = '';
     }
   }
 

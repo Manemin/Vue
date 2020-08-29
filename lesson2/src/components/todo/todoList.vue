@@ -2,7 +2,7 @@
   <div>
     <ul>
       <li v-for="(el, i) in list" :key="i">
-        <todoItem :el="el"/>
+        <todoItem :el="el" :i=i @remove="delFromList($event)" />
       </li>
     </ul>
   </div>
@@ -26,6 +26,11 @@ export default {
     return {
     }
   },
+  methods: {
+    delFromList(i) {
+      this.$emit('delItem', i)
+    }
+  }
 }
 </script>
 

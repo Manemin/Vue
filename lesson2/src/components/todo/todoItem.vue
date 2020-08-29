@@ -1,7 +1,7 @@
 <template>
   <div>
-    <span>{{el}}   </span>
-    <button @click="del">del</button>
+    <span>{{el}}  </span>
+    <button @click="delItem">del</button>
   </div>
 </template>
 
@@ -12,6 +12,14 @@ export default {
   props: {
     el: {
       type: String
+    },
+    i: {
+      type: Number
+    }
+  },
+  methods: {
+    delItem() {
+      this.$emit('remove', this.i)
     }
   }
 }
