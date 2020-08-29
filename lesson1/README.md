@@ -1,24 +1,6 @@
-# lesson1
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+HOMEWORK
+Створити простий todolist
+В папці assests є скрін як приблизно має виглядати
+Має бути масив тудушок, в інпуті вписуємо туду і пушимо в масив
+за допомогою кнопки Add. Видаляємо тудушки за допомогою кнопки delete.
+Якщо тудушок більше 10 кнопка повинна сховатись.
