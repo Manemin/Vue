@@ -1,29 +1,32 @@
 <template>
-<div>
-
-</div>
+  <div>
+    <addTodo/>
+    <todoList :list="list"/>
+    <hr>
+    <Login/>
+  </div>
 </template>
 
 <script>
-import AddTodo from './components/AddTodo.vue';
-import TodoList from "@/components/TodoList";
+
+import addTodo from "@/components/addTodo";
+import todoList from "@/components/todo/todoList";
+import Login from "@/components/email/Login";
 
 export default {
   name: 'App',
   components: {
-    AddTodo,
-    TodoList
+    addTodo,
+    todoList,
+    Login
+  },
+  data() {
+    return {
+      list: ['11', '22', '33']
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>

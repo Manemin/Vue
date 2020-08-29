@@ -1,0 +1,34 @@
+<template>
+  <div>
+    <ul>
+      <li v-for="(el, i) in list" :key="i">
+        <todoItem :el="el"/>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<script>
+
+import todoItem from "@/components/todo/todoItem";
+
+export default {
+  name: "todoList",
+  components: {
+    todoItem
+  },
+  props: {
+    list: {
+      type: Array
+    }
+  },
+  data() {
+    return {
+    }
+  },
+}
+</script>
+
+<style scoped>
+
+</style>
