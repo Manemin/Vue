@@ -10,7 +10,7 @@
         {{item}}
       </li>
     </ul>
-    <button @click="remove">Delete</button>
+    <button v-show="list.length > 0" @click="remove">Delete</button>
   </div>
 
 </template>
